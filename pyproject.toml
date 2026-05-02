@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "skillpilot"
-version = "0.2.0"
+version = "0.3.0"
 description = "228 AI skills for Claude Code — install, run and manage skills directly in your terminal"
 readme = "README.md"
 license = {text = "MIT"}
