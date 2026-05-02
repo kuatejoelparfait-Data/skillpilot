@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "skillpilot"
+version = "0.2.0"
+description = "228 AI skills for Claude Code — install, run and manage skills directly in your terminal"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Joel Parfait", email = "joelparfait237@gmail.com"}]
+keywords = ["claude", "claude-code", "ai", "developer-tools", "cli", "skills"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.12",
+    "anthropic>=0.25",
+    "rich>=13",
+    "keyring>=24",
+]
+
+[project.scripts]
+skillpilot = "devpilot.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/devpilot"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
